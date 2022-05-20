@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Inter:wght@300&family=McLaren&display=swap')
+// #91696D
+
+$title-bg: #116697
+$title-fg: #C9D7FF
+$accent: #69908C
+$fg-accent: #232323
+$bg: #282a36
+$bg-alt:#44475a
+$faded-fg: rgba(255,255,255,.5)
+$border-radius: 5px
+$add-button-border-radius: 10px
+$shadow-bg: rgba(0,0,0, .25) 
+// START GENERAL 
+@font-face
+  font-family: NerdFont
+  src: url(JetbrainsMono.ttf)
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: "Gaegu", NerdFont
+  text-shadow: 2px 2px $shadow-bg
+
+body
+  background-color: $bg
+// END GENERAL
+
+
+// START ADD GOAL 
+.title
+  background-color: $title-bg 
+  color: $title-fg
+  padding: 1rem
+  font-size: 2rem
+  font-family: "McLaren", NerdFont
+  box-shadow: 0 20px 20px $shadow-bg
+
+.add-goal
+  position: relative
+  margin: 1rem 
+  max-width: 30rem
+  box-shadow: 0 0 20px $shadow-bg
+  border-radius: $border-radius
+
+  textarea, input[type=text]
+    padding: 0.7rem
+    width: 100%
+    background-color: $bg
+    border: none
+    font-family: inherit
+    font-weight: 100
+    font-size: 1.5rem
+    color: $title-fg
+    resize: none
+  textarea:focus, input[type=text]:focus
+    border: none
+    outline: none
+  textarea::placeholder, input[type=text]::placeholder
+    color: $faded-fg
+  input[type=text]
+    border-top-left-radius: $border-radius
+    border-top-right-radius: $border-radius
+    padding-bottom: 0
+  button 
+    font-size: 1.3em
+    position: absolute
+    right: 18px
+    bottom: -15px
+    background: $bg
+    border-radius: $add-button-border-radius
+    color: rgba(255,255,255,.5)
+  button:hover
+    color: #fff
+// END ADD GOAL
+
+.float-button
+  position: absolute
+  right: 18px
+  bottom: -15px
+  color: $faded-fg
+  transition: color 200ms ease-in-out
+  box-shadow: 0 2px 20px $shadow-bg
+  cursor: pointer
+  outline: none
+  border: none
+  width: 36px
+  height: 36px
+.float-button:hover
+  color: $fg-accent
+
+.delete-btn
+  background-color: transparent
+  right: 0
+  bottom: 0
+  box-shadow: none
+
+
+// START GOALS
+
+.goal
+  display: flex
+  flex-direction: column
+
+  position: relative
+  margin: 16px
+  padding: 10px
+  max-width: 30rem
+  min-width: 10rem
+  border-radius: $border-radius
+  background-color: $accent
+  float: left
+  font-size: 1.5rem
+  box-shadow: 0 0 50px 2px $shadow-bg
+
+.goal-title, .goal-content
+  color: $fg-accent
+  max-width: 100%
+  white-space: pre-wrap
+  word-wrap: break-word
+
+.goal-title
+  font-weight: 900
+
+// END GOALS
+    
+// START ALERT
+
+.alert
+  position: fixed
+  z-index: 101
+  font-size: 1.1rem
+  left: 0
+  right: 0
+  bottom: 1rem
+  background: $bg-alt
+  border-radius: $border-radius
+  color: #fff
+  font-size: 1.5rem
+  text-align: center
+  line-height: 2.5
+  overflow: hidden
+  animation: fade 250ms ease-in-out forwards
+  opacity: 0
+
+@keyframes fade 
+  100% 
+    opacity: 1
+
+
+// END ALERT

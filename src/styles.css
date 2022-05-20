@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Gaegu&family=Inter:wght@300&family=McLaren&display=swap");
+@font-face {
+  font-family: NerdFont;
+  src: url(JetbrainsMono.ttf);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gaegu", NerdFont;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  background-color: #282a36;
+}
+
+.title {
+  background-color: #116697;
+  color: #C9D7FF;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: "McLaren", NerdFont;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+}
+
+.add-goal {
+  position: relative;
+  margin: 1rem;
+  max-width: 30rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.add-goal textarea, .add-goal input[type=text] {
+  padding: 0.7rem;
+  width: 100%;
+  background-color: #282a36;
+  border: none;
+  font-family: inherit;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: #C9D7FF;
+  resize: none;
+}
+.add-goal textarea:focus, .add-goal input[type=text]:focus {
+  border: none;
+  outline: none;
+}
+.add-goal textarea::placeholder, .add-goal input[type=text]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.add-goal input[type=text] {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-bottom: 0;
+}
+.add-goal button {
+  font-size: 1.3em;
+  position: absolute;
+  right: 18px;
+  bottom: -15px;
+  background: #282a36;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.add-goal button:hover {
+  color: #fff;
+}
+
+.float-button {
+  position: absolute;
+  right: 18px;
+  bottom: -15px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 200ms ease-in-out;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+}
+
+.float-button:hover {
+  color: #232323;
+}
+
+.delete-btn {
+  background-color: transparent;
+  right: 0;
+  bottom: 0;
+  box-shadow: none;
+}
+
+.goal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 16px;
+  padding: 10px;
+  max-width: 30rem;
+  min-width: 10rem;
+  border-radius: 5px;
+  background-color: #69908C;
+  float: left;
+  font-size: 1.5rem;
+  box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.25);
+}
+
+.goal-title, .goal-content {
+  color: #232323;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.goal-title {
+  font-weight: 900;
+}
+
+.alert {
+  position: fixed;
+  z-index: 101;
+  font-size: 1.1rem;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  background: #44475a;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2.5;
+  overflow: hidden;
+  animation: fade 250ms ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
